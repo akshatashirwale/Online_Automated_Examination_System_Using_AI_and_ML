@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="w3-card-4 w3-margin">
+
+    <header class="w3-container w3-blue">
+      <h1>Fill the Details</h1>
+    </header>
+   
+
+
+    <form class="w3-container w3-margin" action="" method="post" enctype="multipart/form-data">
+      <label class="w3-text-teal"><b>Enter Your Username</b></label>
+      <input class="w3-input w3-border w3-light-grey" type="text" name='name' value="{{ name }}" required>
+      <br>
+
+
+  
+      <label class="w3-text-teal"><b>Password</b></label>
+      <input class="w3-input w3-border w3-light-grey" type="password" name='password' value="{{ password }}" required>
+      <br>
+      <label class="w3-text-teal"><b>Select Subject</b></label>
+      <select name="que_set" id="que_set" required="required">
+        <option value="1">General Knowlegde</option>
+        <option value="2">History</option>
+        <option value="3">Psychology</option>
+        <option value="4">Economics</option>
+        <option value="5">Political Science</option>
+    </select>
+      <br><br>
+      <img src="{{ url_for('video_stream') }}" alt="Alps" style="width: 50%">
+      <br><br>
+        <input class="w3-btn w3-blue-grey" name="sub" type="submit" value="Login"/>
+        
+   
+       
+    </form>
+
+    
+    <footer class="w3-container w3-blue">
+      <h5></h5>
+    </footer>
+    
+    </div>
+
+    <div>
+      <p> {{ error | safe }}</p>
+    </div>
+  
+
+    {% endblock %}

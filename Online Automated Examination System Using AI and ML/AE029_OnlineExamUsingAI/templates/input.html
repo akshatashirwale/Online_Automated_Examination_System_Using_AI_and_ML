@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<div class="w3-card-4 w3-margin">
+
+    <header class="w3-container w3-blue">
+      <h1>Question</h1>
+    </header>
+    <img src="{{ url_for('video_stream') }}" alt="Alps" style="width: 50%">
+    <br><br>
+    <form class="w3-container" action="" method="post" enctype="multipart/form-data">
+       <br>
+        <p>{{ question }}</p>
+        <input  class="w3-btn w3-blue-grey" id="submitbutton" name="submitbutton" type="submit" value="Answer">
+        <input  class="w3-btn w3-blue-grey" id="submitbutton" name="submitbutton" type="submit" value="Next">
+        <br> <br>
+
+      </form>
+    <br>
+    <footer class="w3-container w3-blue">
+      <h5></h5>
+    </footer>
+    
+    </div>
+
+    <div class="w3-card-4 w3-margin">
+
+      <header class="w3-container w3-blue">
+        <h1>Your Answer</h1>
+      </header>
+      
+      <div class="w3-container">
+        <p>{{ text }}
+      </p>
+      </div>
+      
+      <footer class="w3-container w3-blue">
+        <h5></h5>
+      </footer>
+  </div>
+
+  <div class="w3-card-4 w3-margin">
+
+    <header class="w3-container w3-blue">
+      <h1>Matching Score</h1>
+    </header>
+    
+    <div class="w3-container">
+      <p>{{ result }}%
+    </p>
+    </div>
+    
+    <footer class="w3-container w3-blue">
+      <h5></h5>
+    </footer>
+</div>
+
+
+  {% endblock %}
