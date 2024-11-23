@@ -1,0 +1,1 @@
+In this project, Designed automated examination system using AI and ML is a digital platform for conducting exams electronically, it integrate technologies to facilitate and enhance the process of conducting exams through the voice processing online. 
